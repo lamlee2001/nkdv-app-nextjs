@@ -19,7 +19,7 @@ export const HeaderLayoutStyle = styled(AppBar)`
         color: #ffffff;
       }
 
-      .css-1aquho2-MuiTabs-indicator {
+      .MuiTabs-indicator {
         background-color: #ffffff;
       }
 
