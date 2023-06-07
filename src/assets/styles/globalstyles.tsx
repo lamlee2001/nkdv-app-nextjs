@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -8,6 +8,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      min-height: 100vh;
+      min-width: 100vw;
+
+      #__next {
+        min-height: 100vh;
+        min-width: 100vw;
+      }
   }
 
   a {
@@ -18,6 +25,6 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
