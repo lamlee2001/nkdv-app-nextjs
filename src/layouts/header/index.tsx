@@ -35,7 +35,7 @@ const HeaderLayout: React.FC = () => {
 
   return (
     <HeaderLayoutStyle position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="container">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
@@ -99,19 +99,22 @@ const HeaderLayout: React.FC = () => {
             }}>
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Tabs value={valueTab} onChange={handleChange} centered>
-              {ITEM_TAB_HEADER.map((item, index) => (
-                <Tab
-                  key={index}
-                  label={item.label}
-                  onClick={() => {
-                    void router.push(item.url);
-                  }}
-                />
-              ))}
-            </Tabs>
-          </Box>
+          <Tabs
+            className="tab-pc"
+            value={valueTab}
+            onChange={handleChange}
+            centered
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {ITEM_TAB_HEADER.map((item, index) => (
+              <Tab
+                key={index}
+                label={item.label}
+                onClick={() => {
+                  void router.push(item.url);
+                }}
+              />
+            ))}
+          </Tabs>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

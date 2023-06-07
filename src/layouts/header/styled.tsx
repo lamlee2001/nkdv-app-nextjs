@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import AppBar from '@mui/material/AppBar';
 
 export const HeaderLayoutStyle = styled(AppBar)`
-  .css-19r6kue-MuiContainer-root {
+  .container {
     max-width: 100%;
 
     .title-logo {
@@ -12,7 +12,7 @@ export const HeaderLayoutStyle = styled(AppBar)`
       color: inherit;
     }
 
-    .MuiBox-root {
+    .tab-pc {
       background-color: transparent;
 
       .MuiButtonBase-root {
@@ -21,6 +21,10 @@ export const HeaderLayoutStyle = styled(AppBar)`
 
       .css-1aquho2-MuiTabs-indicator {
         background-color: #ffffff;
+      }
+
+      .MuiTabs-flexContainer {
+        justify-content: flex-start;
       }
     }
   }
