@@ -2,9 +2,11 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import Head from 'next/head';
+import { Provider } from 'react-redux';
 
 import { FooterLayout, HeaderLayout } from '@/src/layouts';
 import ContentLayout from '@/src/layouts/content';
+import { store } from '@/src/stores';
 
 import GlobalStyle from '@/src/assets/styles/globalstyles';
 
@@ -24,17 +26,19 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
 
-        <HeaderLayout />
+          <HeaderLayout />
 
-        <ContentLayout>
-          <Component {...pageProps} />
-        </ContentLayout>
+          <ContentLayout>
+            <Component {...pageProps} />
+          </ContentLayout>
 
-        <FooterLayout />
-      </ThemeProvider>
+          <FooterLayout />
+        </ThemeProvider>
+      </Provider>
     </>
   );
 };
