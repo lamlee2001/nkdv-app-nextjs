@@ -29,6 +29,7 @@ const HeaderLayout: React.FC = () => {
     handleCloseNavMenu,
     handleCloseUserMenu,
     handleChange,
+    setValueTab,
   } = useHeader();
 
   const router = useRouter();
@@ -80,7 +81,9 @@ const HeaderLayout: React.FC = () => {
               }}>
               {ITEM_TAB_HEADER.map((item, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <Link href={item.url}>{item.label}</Link>
+                  <Link href={item.url} onClick={() => setValueTab(index)}>
+                    {item.label}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>

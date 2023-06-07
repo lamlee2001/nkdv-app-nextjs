@@ -1,8 +1,8 @@
 export const ROUTER_PATH = {
-  HOME: '',
-  INTRODUCTION: 'pages/introduction',
-  PRICE_LIST: 'pages/priceList',
-  SERVICES: 'pages/services',
-  BOOK: 'pages/book',
-  CONTACT: 'pages/contact',
+  HOME: '/',
+  INTRODUCTION: '/introduction',
+  PRICE_LIST: '/pricing',
+  SERVICES: '/services',
+  BOOK: '/book',
+  CONTACT: '/contact',
 };
