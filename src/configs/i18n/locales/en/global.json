@@ -1,1 +1,8 @@
-{}
+{
+  "home": "Home",
+  "introduction": "Introduction",
+  "pricing": "Price list",
+  "services": "Services",
+  "book": "Book",
+  "contact": "Contact"
+}

@@ -3,10 +3,12 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
+import { I18nextProvider } from 'react-i18next';
 
 import { FooterLayout, HeaderLayout } from '@/src/layouts';
 import ContentLayout from '@/src/layouts/content';
 import { store } from '@/src/stores';
+import { I18n } from '@/src/configs/i18n/i18n';
 
 import GlobalStyle from '@/src/assets/styles/globalstyles';
 
@@ -27,17 +29,19 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
       </Head>
 
       <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
+        <I18nextProvider i18n={I18n}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
 
-          <HeaderLayout />
+            <HeaderLayout />
 
-          <ContentLayout>
-            <Component {...pageProps} />
-          </ContentLayout>
+            <ContentLayout>
+              <Component {...pageProps} />
+            </ContentLayout>
 
-          <FooterLayout />
-        </ThemeProvider>
+            <FooterLayout />
+          </ThemeProvider>
+        </I18nextProvider>
       </Provider>
     </>
   );

@@ -15,24 +15,31 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useRouter } from 'next/router';
 
-import useHeader, { ITEM_TAB_HEADER, SETTINGS } from './useHeader';
+import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER, SETTINGS } from './useHeader';
 
 import { HeaderLayoutStyle } from './styled';
+import { useTranslation } from 'react-i18next';
 
 const HeaderLayout: React.FC = () => {
   const {
     anchorElNav,
     anchorElUser,
     valueTab,
+    anchorElLang,
     handleOpenNavMenu,
     handleOpenUserMenu,
+    handleOpenLangMenu,
     handleCloseNavMenu,
     handleCloseUserMenu,
+    handleCloseLangMenu,
     handleChange,
     setValueTab,
+    switchLang,
   } = useHeader();
 
   const router = useRouter();
+
+  const { t } = useTranslation();
 
   return (
     <HeaderLayoutStyle position="static">
@@ -46,7 +53,6 @@ const HeaderLayout: React.FC = () => {
             href="/"
             className="title-logo"
             sx={{
-              mr: 2,
               display: { xs: 'none', md: 'flex' },
             }}>
             LOGO
@@ -82,7 +88,7 @@ const HeaderLayout: React.FC = () => {
               {ITEM_TAB_HEADER.map((item, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <Link href={item.url} onClick={() => setValueTab(index)}>
-                    {item.label}
+                    {t(item.label.toLocaleLowerCase())}
                   </Link>
                 </MenuItem>
               ))}
@@ -107,11 +113,11 @@ const HeaderLayout: React.FC = () => {
             value={valueTab}
             onChange={handleChange}
             centered
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            sx={{ flexGrow: 1, ml: 3, display: { xs: 'none', md: 'flex' } }}>
             {ITEM_TAB_HEADER.map((item, index) => (
               <Tab
                 key={index}
-                label={item.label}
+                label={t(item.label.toLocaleLowerCase())}
                 onClick={() => {
                   void router.push(item.url);
                 }}
@@ -120,6 +126,44 @@ const HeaderLayout: React.FC = () => {
           </Tabs>
 
           <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open lang">
+              <IconButton onClick={handleOpenLangMenu} sx={{}}>
+                <Avatar
+                  variant="square"
+                  alt="Remy Sharp"
+                  src="https://freesvg.org/img/tobias-Flag-of-the-United-Kingdom.png"
+                />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElLang}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElLang)}
+              onClose={handleCloseLangMenu}>
+              {ITEM_LANGUAGE.map((item, index) => (
+                <MenuItem
+                  key={index}
+                  onClick={() => {
+                    switchLang(item.value);
+                    handleCloseLangMenu();
+                  }}>
+                  <Typography textAlign="center">{item.label}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          <Box sx={{ flexGrow: 0, ml: '20px', display: { xs: 'none', md: 'flex' } }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://tapchilamdep.com/wp-content/uploads/2019/10/Rose-887x1024.jpg" />
