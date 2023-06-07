@@ -4,6 +4,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import Head from 'next/head';
 
 import { FooterLayout, HeaderLayout } from '@/src/layouts';
+import ContentLayout from '@/src/layouts/content';
 
 import GlobalStyle from '@/src/assets/styles/globalstyles';
 
@@ -28,7 +29,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 
         <HeaderLayout />
 
-        <Component {...pageProps} />
+        <ContentLayout>
+          <Component {...pageProps} />
+        </ContentLayout>
 
         <FooterLayout />
       </ThemeProvider>

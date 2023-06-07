@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { FooterLayoutStyle } from './styled';
+
 const FooterLayout: React.FC = () => {
-  return <>FooterLayout</>;
+  return <FooterLayoutStyle>&copy; LamLee, Hue 2023</FooterLayoutStyle>;
 };
 
 export default FooterLayout;
