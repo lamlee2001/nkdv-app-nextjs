@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
-import AppBar from '@mui/material/AppBar';
+import { Modal } from '@mui/material';
+import Box from '@mui/material/Box';
 
 import ResponsiveUI, { SIZE, SIZEH } from '@/src/constants/responsive';
 
-const HeaderLayoutResponsive = css`
+const BoxResponsive = css`
   ${ResponsiveUI.lessThanH(SIZEH.PAD3)} {
     content: 'PAD3';
     ${ResponsiveUI.lessThan(SIZE.XXL2)} {
@@ -91,13 +92,7 @@ const HeaderLayoutResponsive = css`
       content: 'PAD1 - SM';
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
-      position: relative;
-
-      .MuiStack-root {
-        position: absolute;
-        top: 64px;
-        right: 0;
-      }
+      width: 358px;
     }
   }
   ${ResponsiveUI.lessThanH(SIZEH.MAC16)} {
@@ -192,58 +187,11 @@ const HeaderLayoutResponsive = css`
   }
 `;
 
-export const HeaderLayoutStyle = styled(AppBar)`
-  .container {
-    max-width: 100%;
+export const ModalCardStyle = styled(Modal)``;
 
-    .title-logo {
-      font-family: 'monospace';
-      font-weight: 700;
-      letter-spacing: 4px;
-      color: inherit;
-    }
+export const BoxStyle = styled(Box)`
+  display: flex;
+  border-radius: 5px;
 
-    .tab-pc {
-      background-color: transparent;
-
-      .MuiButtonBase-root {
-        color: #ffffff;
-      }
-
-      .MuiTabs-indicator {
-        background-color: #ffffff;
-      }
-
-      .MuiTabs-flexContainer {
-        justify-content: flex-start;
-      }
-    }
-
-    .btn-booking {
-      background-color: #ffffff;
-      color: #ff0000;
-      font-weight: 600;
-      padding: 6px 10px;
-
-      @keyframes dance {
-        50% {
-          transform: rotate(0) scale(1) skew(1deg);
-        }
-        30% {
-          transform: rotate(-10deg) scale(1) skew(1deg);
-        }
-        40% {
-          transform: rotate(10deg) scale(1) skew(1deg);
-        }
-      }
-
-      .book-icon {
-        animation: dance 1.5s infinite;
-        margin-right: 5px;
-        font-size: 20px;
-      }
-    }
-  }
-
-  ${HeaderLayoutResponsive}
+  ${BoxResponsive}
 `;

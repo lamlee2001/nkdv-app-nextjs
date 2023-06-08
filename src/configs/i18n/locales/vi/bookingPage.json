@@ -1,0 +1,22 @@
+{
+  "full_name": "Họ và tên",
+  "enter_full_name": "Nhập họ tên",
+  "number_phone": "Số điện thoại",
+  "enter_number_phone": "Nhập số điện thoại",
+  "service_type": "Loại dịch vụ",
+  "enter_type_service": "Chọn loại dịch vụ",
+  "note": "Chú ý",
+  "enter_note": "Nhập chú ý",
+  "send": "Gửi",
+  "cancel": "Huỷ",
+  "message": {
+    "please_enter_full_name": "Vui lòng nhập họ tên",
+    "please_enter_number_phone": "Vui lòng nhập số điện thoại"
+  },
+  "type_select_service": {
+    "type_1": "Bọc răng sứ chỉ 1 triệu / Răng",
+    "type_2": "Cấy ghép implant chỉ 6,9 Triệu",
+    "type_3": "Niềng răng chỉ từ 15 Triệu",
+    "type_4": "Nha khoa tổng quát"
+  }
+}

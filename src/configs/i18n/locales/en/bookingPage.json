@@ -1,0 +1,22 @@
+{
+  "full_name": "Full name",
+  "enter_full_name": "Enter full name",
+  "number_phone": "Number phone",
+  "enter_number_phone": "Enter number phone",
+  "service_type": "Service type",
+  "enter_type_service": "Select service type",
+  "note": "Note",
+  "enter_note": "Enter note",
+  "send": "Send",
+  "cancel": "Cancel",
+  "message": {
+    "please_enter_full_name": "Please enter full name",
+    "please_enter_number_phone": "Please enter number phone"
+  },
+  "type_select_service": {
+    "type_1": "Porcelain dental veneers only 1 million/ Teeth",
+    "type_2": "Implant only 6.9 million VND",
+    "type_3": "Braces from only 15 million VND",
+    "type_4": "General dentistry"
+  }
+}

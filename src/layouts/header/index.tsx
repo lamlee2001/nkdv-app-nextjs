@@ -13,28 +13,31 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import BookIcon from '@mui/icons-material/Book';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 
-import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER, SETTINGS } from './useHeader';
+import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER } from './useHeader';
+import BookPage from '@/src/pages/book';
 
 import { HeaderLayoutStyle } from './styled';
-import { useTranslation } from 'react-i18next';
 
 const HeaderLayout: React.FC = () => {
   const {
     anchorElNav,
-    anchorElUser,
     valueTab,
     anchorElLang,
+    isShowModalBook,
     handleOpenNavMenu,
-    handleOpenUserMenu,
     handleOpenLangMenu,
     handleCloseNavMenu,
-    handleCloseUserMenu,
     handleCloseLangMenu,
     handleChange,
     setValueTab,
     switchLang,
+    setIsShowModalBook,
   } = useHeader();
 
   const router = useRouter();
@@ -163,36 +166,16 @@ const HeaderLayout: React.FC = () => {
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 0, ml: '20px', display: { xs: 'none', md: 'flex' } }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://tapchilamdep.com/wp-content/uploads/2019/10/Rose-887x1024.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}>
-              {SETTINGS.map(setting => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          <Stack spacing={2} direction="row" sx={{ ml: '20px' }}>
+            <Button variant="contained" className="btn-booking" onClick={() => setIsShowModalBook(true)}>
+              <BookIcon className="book-icon" />
+              {t('book')}
+            </Button>
+          </Stack>
         </Toolbar>
       </Container>
+
+      <BookPage open={isShowModalBook} closable={() => setIsShowModalBook(false)} />
     </HeaderLayoutStyle>
   );
 };
