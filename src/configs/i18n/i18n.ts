@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import { en } from './locales/en';
-import { jp } from './locales/jp';
+import { vi } from './locales/vi';
 import { LANGUAGE } from '@/src/constants/config';
 
 i18n
@@ -11,13 +11,13 @@ i18n
     returnNull: false,
     fallbackLng: LANGUAGE.EN,
     debug: false,
-    lng: LANGUAGE.VI,
+    lng: LANGUAGE.EN,
     resources: {
       en: {
         translation: en,
       },
-      jp: {
-        translation: jp,
+      vi: {
+        translation: vi,
       },
     },
     interpolation: {
