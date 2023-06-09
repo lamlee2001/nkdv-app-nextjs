@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -92,10 +91,14 @@ const HeaderLayout: React.FC = () => {
                   display: { xs: 'block', md: 'none' },
                 }}>
                 {ITEM_TAB_HEADER.map((item, index) => (
-                  <MenuItem key={index} onClick={handleCloseNavMenu}>
-                    <Link href={item.url} onClick={() => setValueTab(index)}>
-                      {t(item.label.toLocaleLowerCase())}
-                    </Link>
+                  <MenuItem
+                    key={index}
+                    onClick={() => {
+                      handleCloseNavMenu();
+                      setValueTab(index);
+                      void router.push(item.url);
+                    }}>
+                    <Typography>{t(item.label.toLocaleLowerCase())}</Typography>
                   </MenuItem>
                 ))}
               </Menu>

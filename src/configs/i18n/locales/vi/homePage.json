@@ -1,0 +1,30 @@
+{
+  "title_1": "Làm răng an toàn",
+  "title_2": "Nhận ưu đãi khủng lên đến 60%",
+  "item_offers": {
+    "offer_1": {
+      "title": "Bọc răng sứ chỉ 999k/ Răng",
+      "text_1": "Zirconia Đức: 999k",
+      "text_2": "Cercon HT Đức: 3tr4",
+      "text_3": "Lava Plus: 6tr"
+    },
+    "offer_2": {
+      "title": "Cấy ghép implant chỉ 6,9 Triệu",
+      "text_1": "Implant Hàn: 6,9Tr",
+      "text_2": "Implant Mỹ: 16Tr",
+      "text_3": "Implant Châu Âu: 20Tr"
+    },
+    "offer_3": {
+      "title": "Niềng răng chỉ từ 15 Triệu",
+      "text_1": "Máng leetray: 15tr – 50tr",
+      "text_2": "Mắc cài kim loại: 18tr – 45tr",
+      "text_3": "Mắc cài sứ: 25tr – 45tr"
+    },
+    "offer_4": {
+      "title": "Nha khoa tổng quát",
+      "text_1": "Nhổ răng khôn chỉ từ 500k",
+      "text_2": "Tẩy trắng răng chỉ 500k",
+      "text_3": "Khắc phục cười hở lợi 5tr"
+    }
+  }
+}

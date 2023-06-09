@@ -1,0 +1,30 @@
+{
+  "title_1": "Safety tools",
+  "title_2": "Get huge offers up to 60%",
+  "item_offers": {
+    "offer_1": {
+      "title": "Porcelain veneers only 1 million VND /Teeth",
+      "text_1": "German Zirconia: 1 million VND",
+      "text_2": "Cercon German HT: 3 million 4",
+      "text_3": "Lava Plus: 6 million VND"
+    },
+    "offer_2": {
+      "title": "Implant only 6.9 million VND",
+      "text_1": "Implant Welding: 6.9 million VND",
+      "text_2": "American Implant: 16 million VND",
+      "text_3": "European Implant: 20 million VND"
+    },
+    "offer_3": {
+      "title": "Braces from only 15 million VND",
+      "text_1": "Leetray trough: 15 million - 50 million",
+      "text_2": "Metal brackets: 18 million - 45 million VND",
+      "text_3": "Ceramic brackets: 25 million - 45 million VND"
+    },
+    "offer_4": {
+      "title": "General dentistry",
+      "text_1": "Wisdom tooth extraction from only 500 thousand VND",
+      "text_2": "Teeth whitening only 500 thousand VND",
+      "text_3": "Fix gummy smile 5 million"
+    }
+  }
+}

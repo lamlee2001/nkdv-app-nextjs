@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Avatar } from '@mui/material';
 
+import OffersCard from './offers';
+
 import { HomePageStyle } from './styled';
 
 const HomePage: React.FC = () => {
@@ -28,9 +30,11 @@ const HomePage: React.FC = () => {
     <HomePageStyle>
       <Carousel swipe={true} indicators={false} className="carousel">
         {items.map((item, i) => (
-          <Avatar key={i} src={item.url} variant="square" />
+          <Avatar key={i} src={item.url} variant="square" className="image-slide" />
         ))}
       </Carousel>
+
+      <OffersCard />
     </HomePageStyle>
   );
 };
