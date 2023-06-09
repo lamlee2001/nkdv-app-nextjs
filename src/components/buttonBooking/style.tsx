@@ -28,7 +28,7 @@ export const ButtonBookingStyle = styled(Button)`
   }
 
   &.btn-booking-mobile {
-    position: absolute;
+    position: fixed;
     top: 64px;
     right: 24px;
     z-index: 2;

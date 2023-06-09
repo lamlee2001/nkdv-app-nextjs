@@ -191,6 +191,7 @@ const HeaderLayoutResponsive = css`
 
 export const HeaderLayoutStyle = styled(AppBar)`
   position: fixed;
+  z-index: 2;
 
   .container {
     max-width: 100%;
