@@ -88,7 +88,7 @@ const BookResponsive = css`
       content: 'PAD1 - MD';
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
-        width: 100%;
+      width: 100%;
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
       content: 'PAD1 - XS';
@@ -211,5 +211,6 @@ export const ImageStyle = styled(Grid)`
   .avt-booking {
     height: 100%;
     width: 100%;
+    border-radius: 6px 0 0 6px;
   }
 `;
