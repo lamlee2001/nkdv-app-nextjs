@@ -55,7 +55,7 @@ const BookResponsive = css`
       content: 'PAD2 - LG';
     }
     ${ResponsiveUI.lessThan(SIZE.MD)} {
-      content: 'PAD2 - MD';
+      width: 100%;
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
       content: 'PAD2 - SM';
@@ -88,7 +88,6 @@ const BookResponsive = css`
       content: 'PAD1 - MD';
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
-      width: 100%;
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
       content: 'PAD1 - XS';

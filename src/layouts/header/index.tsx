@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next';
 import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER } from './useHeader';
 import BookPage from '@/src/pages/book';
 
-import { HeaderLayoutStyle } from './styled';
+import { BoxEmpty, HeaderLayoutStyle } from './styled';
 
 const HeaderLayout: React.FC = () => {
   const {
@@ -45,138 +45,141 @@ const HeaderLayout: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <HeaderLayoutStyle position="static">
-      <Container maxWidth="xl" className="container">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            className="title-logo"
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-            }}>
-            LOGO
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit">
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+    <>
+      <HeaderLayoutStyle position="static">
+        <Container maxWidth="xl" className="container">
+          <Toolbar disableGutters>
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              className="title-logo"
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'none', md: 'flex' },
               }}>
-              {ITEM_TAB_HEADER.map((item, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <Link href={item.url} onClick={() => setValueTab(index)}>
-                    {t(item.label.toLocaleLowerCase())}
-                  </Link>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            className="title-logo"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-            }}>
-            LOGO
-          </Typography>
-          <Tabs
-            className="tab-pc"
-            value={valueTab}
-            onChange={handleChange}
-            centered
-            sx={{ flexGrow: 1, ml: 3, display: { xs: 'none', md: 'flex' } }}>
-            {ITEM_TAB_HEADER.map((item, index) => (
-              <Tab
-                key={index}
-                label={t(item.label.toLocaleLowerCase())}
-                onClick={() => {
-                  void router.push(item.url);
-                }}
-              />
-            ))}
-          </Tabs>
+              LOGO
+            </Typography>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open lang">
-              <IconButton onClick={handleOpenLangMenu} sx={{}}>
-                <Avatar
-                  variant="square"
-                  alt="Remy Sharp"
-                  src="https://freesvg.org/img/tobias-Flag-of-the-United-Kingdom.png"
-                />
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit">
+                <MenuIcon />
               </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElLang}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElLang)}
-              onClose={handleCloseLangMenu}>
-              {ITEM_LANGUAGE.map((item, index) => (
-                <MenuItem
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: 'block', md: 'none' },
+                }}>
+                {ITEM_TAB_HEADER.map((item, index) => (
+                  <MenuItem key={index} onClick={handleCloseNavMenu}>
+                    <Link href={item.url} onClick={() => setValueTab(index)}>
+                      {t(item.label.toLocaleLowerCase())}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href=""
+              className="title-logo"
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+              }}>
+              LOGO
+            </Typography>
+            <Tabs
+              className="tab-pc"
+              value={valueTab}
+              onChange={handleChange}
+              centered
+              sx={{ flexGrow: 1, ml: 3, display: { xs: 'none', md: 'flex' } }}>
+              {ITEM_TAB_HEADER.map((item, index) => (
+                <Tab
                   key={index}
+                  label={t(item.label.toLocaleLowerCase())}
                   onClick={() => {
-                    switchLang(item.value);
-                    handleCloseLangMenu();
-                  }}>
-                  <Typography textAlign="center">{item.label}</Typography>
-                </MenuItem>
+                    void router.push(item.url);
+                  }}
+                />
               ))}
-            </Menu>
-          </Box>
+            </Tabs>
 
-          <Stack spacing={2} direction="row" sx={{ ml: '20px' }}>
-            <Button variant="contained" className="btn-booking" onClick={() => setIsShowModalBook(true)}>
-              <BookIcon className="book-icon" />
-              {t('book')}
-            </Button>
-          </Stack>
-        </Toolbar>
-      </Container>
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open lang">
+                <IconButton onClick={handleOpenLangMenu}>
+                  <Avatar
+                    variant="square"
+                    alt="Remy Sharp"
+                    src="https://freesvg.org/img/tobias-Flag-of-the-United-Kingdom.png"
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElLang}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElLang)}
+                onClose={handleCloseLangMenu}>
+                {ITEM_LANGUAGE.map((item, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={() => {
+                      switchLang(item.value);
+                      handleCloseLangMenu();
+                    }}>
+                    <Typography textAlign="center">{item.label}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
 
-      <BookPage open={isShowModalBook} closable={() => setIsShowModalBook(false)} />
-    </HeaderLayoutStyle>
+            <Stack spacing={2} direction="row" sx={{ ml: '20px' }}>
+              <Button variant="contained" className="btn-booking" onClick={() => setIsShowModalBook(true)}>
+                <BookIcon className="book-icon" />
+                {t('book')}
+              </Button>
+            </Stack>
+          </Toolbar>
+        </Container>
+
+        <BookPage open={isShowModalBook} closable={() => setIsShowModalBook(false)} />
+      </HeaderLayoutStyle>
+      <BoxEmpty className="empty" />
+    </>
   );
 };
 

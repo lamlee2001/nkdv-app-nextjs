@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       min-height: 100vh;
       min-width: 100vw;
-
+      overflow-x: hidden;
+      
       #__next {
         min-height: 100vh;
         min-width: 100vw;

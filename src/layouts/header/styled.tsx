@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import AppBar from '@mui/material/AppBar';
+import { Box } from '@mui/material';
 
 import ResponsiveUI, { SIZE, SIZEH } from '@/src/constants/responsive';
 
@@ -91,8 +92,6 @@ const HeaderLayoutResponsive = css`
       content: 'PAD1 - SM';
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
-      position: relative;
-
       .MuiStack-root {
         position: absolute;
         top: 64px;
@@ -193,6 +192,8 @@ const HeaderLayoutResponsive = css`
 `;
 
 export const HeaderLayoutStyle = styled(AppBar)`
+  position: fixed;
+
   .container {
     max-width: 100%;
 
@@ -246,4 +247,12 @@ export const HeaderLayoutStyle = styled(AppBar)`
   }
 
   ${HeaderLayoutResponsive}
+`;
+
+export const BoxEmpty = styled(Box)`
+  height: 64px;
+
+  @media only screen and (max-width: 768px) {
+    height: 56px;
+  }
 `;
