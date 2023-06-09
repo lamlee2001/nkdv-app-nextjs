@@ -92,12 +92,6 @@ const OffersResponsive = css`
       content: 'PAD1 - LG';
     }
     ${ResponsiveUI.lessThan(SIZE.MD)} {
-      content: 'PAD1 - MD';
-    }
-    ${ResponsiveUI.lessThan(SIZE.SM)} {
-      content: 'PAD1 - SM';
-    }
-    ${ResponsiveUI.lessThan(SIZE.XS)} {
       .grid-item-offers {
         margin-top: 20px;
         padding: 0 24px;
@@ -110,6 +104,10 @@ const OffersResponsive = css`
           box-shadow: 0 2px 3px 1px rgb(0 0 0 / 50%);
         }
       }
+    }
+    ${ResponsiveUI.lessThan(SIZE.SM)} {
+    }
+    ${ResponsiveUI.lessThan(SIZE.XS)} {
     }
   }
   ${ResponsiveUI.lessThanH(SIZEH.MAC16)} {
