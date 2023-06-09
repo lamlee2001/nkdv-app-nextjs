@@ -93,9 +93,7 @@ const HeaderLayoutResponsive = css`
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
       .MuiStack-root {
-        position: absolute;
-        top: 64px;
-        right: 0;
+        display: none;
       }
     }
   }
@@ -217,31 +215,6 @@ export const HeaderLayoutStyle = styled(AppBar)`
 
       .MuiTabs-flexContainer {
         justify-content: flex-start;
-      }
-    }
-
-    .btn-booking {
-      background-color: #ffffff;
-      color: #ff0000;
-      font-weight: 600;
-      padding: 6px 10px;
-
-      @keyframes dance {
-        50% {
-          transform: rotate(0) scale(1) skew(1deg);
-        }
-        30% {
-          transform: rotate(-10deg) scale(1) skew(1deg);
-        }
-        40% {
-          transform: rotate(10deg) scale(1) skew(1deg);
-        }
-      }
-
-      .book-icon {
-        animation: dance 1.5s infinite;
-        margin-right: 5px;
-        font-size: 20px;
       }
     }
   }

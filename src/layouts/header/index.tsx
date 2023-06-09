@@ -14,11 +14,11 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import BookIcon from '@mui/icons-material/Book';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 
+import ButtonBooking from '@/src/components/buttonBooking';
+import useWindowSize from '@/src/hooks/useWindowSize/useWindowSize';
 import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER } from './useHeader';
 import BookPage from '@/src/pages/book';
 
@@ -43,6 +43,8 @@ const HeaderLayout: React.FC = () => {
   const router = useRouter();
 
   const { t } = useTranslation();
+
+  const { isMobile } = useWindowSize();
 
   return (
     <>
@@ -168,10 +170,7 @@ const HeaderLayout: React.FC = () => {
             </Box>
 
             <Stack spacing={2} direction="row" sx={{ ml: '20px' }}>
-              <Button variant="contained" className="btn-booking" onClick={() => setIsShowModalBook(true)}>
-                <BookIcon className="book-icon" />
-                {t('book')}
-              </Button>
+              <ButtonBooking buttonProps={{ onClick: () => setIsShowModalBook(true) }} />
             </Stack>
           </Toolbar>
         </Container>
@@ -179,6 +178,7 @@ const HeaderLayout: React.FC = () => {
         <BookPage open={isShowModalBook} closable={() => setIsShowModalBook(false)} />
       </HeaderLayoutStyle>
       <BoxEmpty className="empty" />
+      {isMobile ? <ButtonBooking buttonProps={{ onClick: () => setIsShowModalBook(true) }} /> : <React.Fragment />}
     </>
   );
 };
