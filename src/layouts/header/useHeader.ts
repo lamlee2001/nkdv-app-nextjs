@@ -6,7 +6,7 @@ import { changeLanguage } from '@/src/stores/app/i18n/i18n.action';
 
 export const ITEM_TAB_HEADER = [
   { label: 'Home', url: ROUTER_PATH.HOME },
-  { label: 'Introduction', url: ROUTER_PATH.INTRODUCTION },
+  { label: 'About', url: ROUTER_PATH.INTRODUCTION },
   { label: 'Pricing', url: ROUTER_PATH.PRICE_LIST },
   { label: 'Services', url: ROUTER_PATH.SERVICES },
   { label: 'Contact', url: ROUTER_PATH.CONTACT },

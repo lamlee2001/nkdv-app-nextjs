@@ -26,5 +26,34 @@
       "text_2": "Teeth whitening only 500 thousand VND",
       "text_3": "Fix gummy smile 5 million"
     }
+  },
+  "services": "Services",
+  "name_dental": "Dai Viet Dental Clinic",
+  "see_more": "View more",
+  "item_service": {
+    "service_1": {
+      "title": "Braces in Da Nang - Restore Beautiful White Teeth",
+      "text": "Braces is a method of using dental appliances to rearrange misaligned, overgrown, underbite, sparse teeth, .. to their correct position, giving you aesthetic beauty, helping to regain your confident when smiling and talking in communication."
+    },
+    "service_2": {
+      "title": "Teeth Whitening in Da Nang",
+      "text": "Teeth whitening is a cosmetic dental procedure that works to improve the color of discolored, dull and yellowed teeth to become whiter. Saigon International Dental Clinic has updated new technology - using energy from biological light sources to help release a pure amount of oxygen to the tooth surface, cutting off the colored protein chains inside, making teeth white. naturally bright."
+    },
+    "service_3": {
+      "title": "Clear tray braces tooth",
+      "text": "Clear aligner orthodontics is also known as removable braces, non-fixed braces, braces without brackets, invisible braces. This is a physical method to help realign misaligned teeth as well as overcome some unsightly teeth."
+    },
+    "service_4": {
+      "title": "Smile Treatment - Get Your Beautiful Smile Back - Up to 20% Off In Da Nang",
+      "text": "Gummy smile is called in English as Gummy Smile. Understood in the simplest sense is that when we smile, we will see the exposed gums along with the teeth. Theoretically, the root and neck are too far apart from normal by more than 3mm."
+    },
+    "service_5": {
+      "title": "Prestigious Dental Implants in Da Nang - 30% Off - Premium Porcelain Teeth Gifts",
+      "text": "f in the past, when a tooth was lost, it was only possible to restore the shape of the crown, but today, with modern technology, Implant allows to simulate and restore the root of a tooth similar to a real tooth without any traditional solution. can be done."
+    },
+    "service_6": {
+      "title": "Beautiful & super durable porcelain crown - up to 50% off in Da Nang",
+      "text": "Cosmetic porcelain crown is a dental solution that helps restore the aesthetics of teeth by using porcelain crowns to fit on real teeth. Thereby, helping to cover the defects of the teeth or fill in the gaps of missing teeth. At the same time, it increases the aesthetics as well as restores chewing function for the teeth."
+    }
   }
 }

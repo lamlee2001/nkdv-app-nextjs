@@ -26,5 +26,34 @@
       "text_2": "Tẩy trắng răng chỉ 500k",
       "text_3": "Khắc phục cười hở lợi 5tr"
     }
+  },
+  "services": "Dịch vụ",
+  "name_dental": "Nha khoa Đại việt",
+  "see_more": "Xem thêm",
+  "item_service": {
+    "service_1": {
+      "title": "Niềng Răng tại Đà Nẵng - Phục Hồi Hàm Răng Trắng Đều Đẹp",
+      "text": "Niềng răng là phương pháp sử dụng các khí cụ nha khoa để sắp xếp lại các răng mọc lệch lạc, hô, móm, thưa,.. về đúng vị trí của nó, mang lại cho bạn vẻ đẹp thẩm mỹ, giúp lấy lại sự tự tin khi cười và trò chuyện trong giao tiếp."
+    },
+    "service_2": {
+      "title": "Tẩy Trắng Răng tại Đà Nẵng",
+      "text": "Tẩy trắng răng là phương pháp nha khoa thẩm mỹ có tác dụng cải thiện màu sắc của răng bị nhiễm màu, xỉn màu và ố vàng trở nên trắng sáng hơn. Nha Khoa Sài Gòn Quốc Tế đã cập nhật công nghệ mới - sử dụng năng lượng từ các nguồn ánh sáng sinh học giúp phóng thích một lượng oxy nguyên chất lên bề mặt răng, cắt đứt các chuỗi Protein màu bên trong, làm cho răng trắng sáng một cách tự nhiên. "
+    },
+    "service_3": {
+      "title": "Niềng răng khay trong suốt",
+      "text": "Chỉnh nha khay trong suốt hay còn được gọi là niềng răng tháo lắp, niềng răng không cố định, niềng răng không mắc cài, niềng răng vô hình. Đây là một phương pháp vật lý giúp căn chỉnh lại răng mọc lệch cũng như khắc phục một số tình trạng răng thiếu thẩm mỹ."
+    },
+    "service_4": {
+      "title": "Điều Trị Cười Hở Lợi - Lấy lại Nụ Cười Tươi Xinh - Ưu Đãi Đến 20% Tại Đà Nẵng",
+      "text": "Cười hở lợi có tên gọi trong tiếng anh là Gummy Smile.  Hiểu theo một nghĩa đơn giản nhất là khi cười chúng ta sẽ nhìn thấy cả phần lợi bị hở ra kèm với răng. Theo lý thuyết thì chân răng và cổ răng có khoảng cách quá nhiều so với bình thường hơn 3mm."
+    },
+    "service_5": {
+      "title": "Trồng Răng Implant Uy Tín Tại Đà Nẵng - Ưu Đãi 30% - Tặng Răng Sứ Cao Cấsp",
+      "text": "Nếu như trước đây, lúc mất răng chỉ có thể phục hồi lại hình dáng thân răng thì ngày nay với công nghệ hiện đại Trồng răng Implant cho phép mô phỏng và khôi phục chân răng tương tự răng thật mà chưa có giải pháp truyền thống nào thực hiện được."
+    },
+    "service_6": {
+      "title": "Bọc răng sứ đẹp & siêu bền - ưu đãi lên đến 50% tại Đà Nẵng",
+      "text": "Bọc răng sứ thẩm mỹ là giải pháp nha khoa giúp phục hình lại thẩm mỹ cho hàm răng bằng cách sử dụng mão răng sứ để lắp lên răng thật. Qua đó, giúp che đi khuyết điểm của răng hoặc lấp đầy khoảng trống mất răng. Đồng thời, làm tăng thêm tính thẩm mỹ cũng như khôi phục chức năng ăn nhai cho hàm răng."
+    }
   }
 }

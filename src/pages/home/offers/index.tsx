@@ -3,11 +3,12 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Avatar, Divider, Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+import DividerTooth from '@/src/components/dividerTooth';
+
 import OFFER_1 from 'src/assets/image/offer_1.png';
 import OFFER_2 from 'src/assets/image/offer_2.png';
 import OFFER_3 from 'src/assets/image/offer_3.jpeg';
 import OFFER_4 from 'src/assets/image/offer_4.jpg';
-import TOOTH_IMAGE from 'src/assets/image/tooth-image.png';
 import { BoxStyle, OffersStyle } from './styled';
 
 const OffersCard: React.FC = () => {
@@ -84,11 +85,7 @@ const OffersCard: React.FC = () => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} className="grid-item divider">
-        <Typography className="text-before" />
-        <Avatar src={TOOTH_IMAGE.src} className="image-tooth" variant="square" />
-        <Typography className="text-affter" />
-      </Grid>
+      <DividerTooth />
 
       <Grid container className="grid-item grid-item-offers">
         {renderItemOffers()}

@@ -203,10 +203,9 @@ export const OffersStyle = styled(Grid)`
   padding: 20px 0;
   visibility: visible;
   opacity: 1;
-  background: linear-gradient(0deg, rgba(226, 242, 242, 1) 0%, rgba(17, 163, 193, 1) 100%);
+  background: linear-gradient(0deg, rgba(226, 242, 242, 1) 0%, #aef1ff 100%);
 
   .grid-item {
-    z-index: 1;
     padding: 0 24px;
 
     .text-title {
@@ -236,45 +235,6 @@ export const OffersStyle = styled(Grid)`
         box-shadow: 0 2px 3px 1px rgb(0 0 0 / 50%);
       }
     }
-  }
-
-  .divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
-    .text-affter,
-    .text-before {
-      height: 1px;
-      width: 100px;
-    }
-
-    .text-affter {
-      margin-left: 5px;
-      background: linear-gradient(to left, #00efef 0%, #141e19 100%);
-    }
-
-    .text-before {
-      margin-right: 5px;
-      background: linear-gradient(to right, #00efef 0%, #141e19 100%);
-    }
-
-    .image-tooth {
-      height: 30px;
-      width: 30px;
-    }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-color: rgb(255 255 255 / 75%);
   }
 
   ${OffersResponsive}
