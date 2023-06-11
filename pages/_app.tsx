@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
+import { CircularProgress, Grid } from '@mui/material';
 
 import { FooterLayout, HeaderLayout } from '@/src/layouts';
 import ContentLayout from '@/src/layouts/content';
@@ -20,6 +21,12 @@ const theme: DefaultTheme = {
 };
 
 const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 2000);
+
   return (
     <>
       <Head>
@@ -33,13 +40,21 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
           <ThemeProvider theme={theme}>
             <GlobalStyle />
 
-            <HeaderLayout />
+            {isLoading ? (
+              <Grid container className="is-loading">
+                <CircularProgress />
+              </Grid>
+            ) : (
+              <>
+                <HeaderLayout />
 
-            <ContentLayout>
-              <Component {...pageProps} />
-            </ContentLayout>
+                <ContentLayout>
+                  <Component {...pageProps} />
+                </ContentLayout>
 
-            <FooterLayout />
+                <FooterLayout />
+              </>
+            )}
           </ThemeProvider>
         </I18nextProvider>
       </Provider>
