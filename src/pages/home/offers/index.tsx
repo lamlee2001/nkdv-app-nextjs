@@ -61,13 +61,13 @@ const OffersCard: React.FC = () => {
           <BoxStyle>
             <Typography className="title-offers fzm-14">{item.title}</Typography>
             {item.content.map((item, index) => (
-              <>
-                <Typography key={index} className="fzm-14">
+              <Grid key={index}>
+                <Typography className="fzm-14">
                   <PlayArrowIcon className="icon-arrow" />
                   {item}
                 </Typography>
                 <Divider className="divider" />
-              </>
+              </Grid>
             ))}
           </BoxStyle>
         </div>

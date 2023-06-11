@@ -31,7 +31,7 @@ const FooterLayout: React.FC = () => {
     <>
       <FooterLayoutStyle>
         <Grid container className="container">
-          <Grid xs={12} md={2} className="grid-item-first">
+          <Grid item xs={12} md={2} className="grid-item-first">
             <Avatar className="logo-image" variant="square" alt="Remy Sharp" src={NKDV_LOGO.src} />
             <Grid className="grid-icon">
               <FacebookIcon className="icon-network" />
@@ -39,7 +39,7 @@ const FooterLayout: React.FC = () => {
               <YouTubeIcon className="icon-network" />
             </Grid>
           </Grid>
-          <Grid xs={12} md={6} className="grid-item-second">
+          <Grid item xs={12} md={6} className="grid-item-second">
             <Typography className="title">Nha khoa đại việt</Typography>
             <Grid className="booking">
               <PhoneInTalkIcon className="icon" />
@@ -47,7 +47,7 @@ const FooterLayout: React.FC = () => {
             </Grid>
             {renderInfo()}
           </Grid>
-          <Grid xs={12} md={4} className="grid-item-end">
+          <Grid item xs={12} md={4} className="grid-item-end">
             <Typography className="title">Giờ làm việc</Typography>
             <Typography className="mt-10">Từ thứ 2 đến chủ nhật</Typography>
             <Grid container className="mt-10">
