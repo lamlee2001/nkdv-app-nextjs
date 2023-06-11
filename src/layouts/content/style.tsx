@@ -5,4 +5,5 @@ export const ContentLayoutStyle = styled(Container)`
   max-width: 100%;
   background-color: antiquewhite;
   padding: 0;
+  min-height: 500px;
 `;
