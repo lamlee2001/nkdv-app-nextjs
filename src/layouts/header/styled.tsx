@@ -86,7 +86,14 @@ const HeaderLayoutResponsive = css`
       content: 'PAD1 - LG';
     }
     ${ResponsiveUI.lessThan(SIZE.MD)} {
-      content: 'PAD1 - MD';
+      .logo-image {
+        justify-content: flex-start;
+
+        img {
+          height: 60px;
+          width: 80px;
+        }
+      }
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
       content: 'PAD1 - SM';
@@ -217,6 +224,19 @@ export const HeaderLayoutStyle = styled(AppBar)`
       .MuiTabs-flexContainer {
         justify-content: flex-start;
       }
+    }
+
+    .avt-language {
+      height: 20px;
+
+      img {
+        height: 20px;
+      }
+    }
+
+    .logo-image {
+      height: 60px;
+      width: 80px;
     }
   }
 

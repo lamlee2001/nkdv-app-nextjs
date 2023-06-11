@@ -3,6 +3,10 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Avatar, Divider, Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+import OFFER_1 from 'src/assets/image/offer_1.png';
+import OFFER_2 from 'src/assets/image/offer_2.png';
+import OFFER_3 from 'src/assets/image/offer_3.jpeg';
+import OFFER_4 from 'src/assets/image/offer_4.jpg';
 import TOOTH_IMAGE from 'src/assets/image/tooth-image.png';
 import { BoxStyle, OffersStyle } from './styled';
 
@@ -11,7 +15,7 @@ const OffersCard: React.FC = () => {
 
   const itemOffers = [
     {
-      urlAvatar: 'https://tapchilamdep.com/wp-content/uploads/2019/10/Rose-887x1024.jpg',
+      urlAvatar: OFFER_1.src,
       title: t('homePage.item_offers.offer_1.title'),
       content: [
         t('homePage.item_offers.offer_1.text_1'),
@@ -20,8 +24,7 @@ const OffersCard: React.FC = () => {
       ],
     },
     {
-      urlAvatar:
-        'https://danviet.mediacdn.vn/zoom/700_438/2020/11/4/lisa-blackpink-160444886213712136820-crop-1604449325972318319495.jpg',
+      urlAvatar: OFFER_2.src,
       title: t('homePage.item_offers.offer_2.title'),
       content: [
         t('homePage.item_offers.offer_2.text_1'),
@@ -30,7 +33,7 @@ const OffersCard: React.FC = () => {
       ],
     },
     {
-      urlAvatar: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Jisoo_in_2022.jpg',
+      urlAvatar: OFFER_3.src,
       title: t('homePage.item_offers.offer_2.title'),
       content: [
         t('homePage.item_offers.offer_3.text_1'),
@@ -39,8 +42,7 @@ const OffersCard: React.FC = () => {
       ],
     },
     {
-      urlAvatar:
-        'https://nhadepso.com/wp-content/uploads/2023/02/me-man-55-hinh-anh-jennie-de-thuong-cuc-dang-yeu-an-tuong-nhat_1.jpg',
+      urlAvatar: OFFER_4.src,
       title: t('homePage.item_offers.offer_2.title'),
       content: [
         t('homePage.item_offers.offer_4.text_1'),

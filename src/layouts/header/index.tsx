@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Stack from '@mui/material/Stack';
@@ -20,8 +19,13 @@ import ButtonBooking from '@/src/components/buttonBooking';
 import useWindowSize from '@/src/hooks/useWindowSize/useWindowSize';
 import useHeader, { ITEM_LANGUAGE, ITEM_TAB_HEADER } from './useHeader';
 import BookPage from '@/src/pages/book';
+import { useAppSelector } from '@/src/stores';
 
+import NKDV_LOGO from 'src/assets/image/nkdv_image.png';
+import UNITED_IMAGE from 'src/assets/image/united-image.png';
+import VIETNAM_IMAGE from 'src/assets/image/quoc-ky-viet-nam.jpg';
 import { BoxEmpty, HeaderLayoutStyle } from './styled';
+import { LANGUAGE } from '@/src/constants/config';
 
 const HeaderLayout: React.FC = () => {
   const {
@@ -45,23 +49,22 @@ const HeaderLayout: React.FC = () => {
 
   const { isMobile } = useWindowSize();
 
+  const { language } = useAppSelector(state => state.app.i18n);
+
   return (
     <>
       <HeaderLayoutStyle position="static">
         <Container maxWidth="xl" className="container">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              className="title-logo"
+            <Avatar
               sx={{
                 display: { xs: 'none', md: 'flex' },
-              }}>
-              LOGO
-            </Typography>
+              }}
+              className="logo-image"
+              variant="square"
+              alt="Remy Sharp"
+              src={NKDV_LOGO.src}
+            />
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -103,20 +106,18 @@ const HeaderLayout: React.FC = () => {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              className="title-logo"
+
+            <Avatar
               sx={{
-                mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-              }}>
-              LOGO
-            </Typography>
+              }}
+              className="logo-image"
+              variant="square"
+              alt="Remy Sharp"
+              src={NKDV_LOGO.src}
+            />
+
             <Tabs
               className="tab-pc"
               value={valueTab}
@@ -138,9 +139,10 @@ const HeaderLayout: React.FC = () => {
               <Tooltip title="Open lang">
                 <IconButton onClick={handleOpenLangMenu}>
                   <Avatar
+                    className="avt-language"
                     variant="square"
                     alt="Remy Sharp"
-                    src="https://freesvg.org/img/tobias-Flag-of-the-United-Kingdom.png"
+                    src={language === LANGUAGE.VI ? VIETNAM_IMAGE.src : UNITED_IMAGE.src}
                   />
                 </IconButton>
               </Tooltip>
@@ -172,7 +174,7 @@ const HeaderLayout: React.FC = () => {
               </Menu>
             </Box>
 
-            <Stack spacing={2} direction="row" sx={{ ml: '20px' }}>
+            <Stack spacing={2} direction="row" sx={{ ml: '20px', display: { xs: 'none', md: 'flex' } }}>
               <ButtonBooking buttonProps={{ onClick: () => setIsShowModalBook(true) }} />
             </Stack>
           </Toolbar>
@@ -180,6 +182,7 @@ const HeaderLayout: React.FC = () => {
 
         <BookPage open={isShowModalBook} closable={() => setIsShowModalBook(false)} />
       </HeaderLayoutStyle>
+
       <BoxEmpty className="empty" />
       {isMobile ? <ButtonBooking buttonProps={{ onClick: () => setIsShowModalBook(true) }} /> : <React.Fragment />}
     </>

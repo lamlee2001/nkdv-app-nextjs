@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Box, Grid } from '@mui/material';
 
-import BG_OFFERS from 'src/assets/image/offers-bg-image.jpg';
 import ResponsiveUI, { SIZE, SIZEH } from '@/src/constants/responsive';
 
 const OffersResponsive = css`
@@ -99,9 +98,6 @@ const OffersResponsive = css`
         .image-offers {
           height: 154px !important;
           width: 154px !important;
-          border-radius: 50%;
-          border: 3px solid #ffffff;
-          box-shadow: 0 2px 3px 1px rgb(0 0 0 / 50%);
         }
       }
     }
@@ -205,11 +201,9 @@ const OffersResponsive = css`
 export const OffersStyle = styled(Grid)`
   position: relative;
   padding: 20px 0;
-  background-image: url(${BG_OFFERS.src});
-  background-repeat: no-repeat;
   visibility: visible;
   opacity: 1;
-  background-size: 100% 100%;
+  background: linear-gradient(0deg, rgba(226, 242, 242, 1) 0%, rgba(17, 163, 193, 1) 100%);
 
   .grid-item {
     z-index: 1;
@@ -238,6 +232,8 @@ export const OffersStyle = styled(Grid)`
         height: 264px;
         width: 264px;
         border-radius: 50%;
+        border: 3px solid #ffffff;
+        box-shadow: 0 2px 3px 1px rgb(0 0 0 / 50%);
       }
     }
   }

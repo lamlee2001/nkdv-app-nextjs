@@ -1,28 +1,36 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import { Avatar } from '@mui/material';
 
 import OffersCard from './offers';
 
-import { HomePageStyle } from './styled';
+import BANNER_1 from 'src/assets/image/banner_1.jpg';
+import BANNER_2 from 'src/assets/image/banner_2.jpg';
+import BANNER_3 from 'src/assets/image/banner_3.jpg';
+import BANNER_4 from 'src/assets/image/banner_4.jpg';
+import BANNER_5 from 'src/assets/image/banner_5.jpg';
+import { HomePageStyle, WrapperBanner } from './styled';
 
 const HomePage: React.FC = () => {
   const items = [
     {
-      name: 'Rose 1',
-      url: 'https://i.vietgiaitri.com/2021/2/13/rose-blackpink-co-suc-hut-co-nao-119-5577110.jpg',
+      name: 'banner 1',
+      url: BANNER_1.src,
     },
     {
-      name: 'Rose 2',
-      url: 'https://thuthuatnhanh.com/wp-content/uploads/2021/06/hinh-anh-Rose-Black-Pink-dep-quyen-ru.jpg',
+      name: 'banner 2',
+      url: BANNER_2.src,
     },
     {
-      name: 'Rose 3',
-      url: 'https://thuthuatnhanh.com/wp-content/uploads/2021/06/hinh-anh-Rose-Black-Pink-quyen-ru.jpg',
+      name: 'banner 3',
+      url: BANNER_3.src,
     },
     {
-      name: 'Rose 4',
-      url: 'https://bloganchoi.com/wp-content/uploads/2022/07/anh-bia-6.jpg',
+      name: 'banner 4',
+      url: BANNER_4.src,
+    },
+    {
+      name: 'banner 5',
+      url: BANNER_5.src,
     },
   ];
 
@@ -30,7 +38,7 @@ const HomePage: React.FC = () => {
     <HomePageStyle>
       <Carousel swipe={true} indicators={false} className="carousel">
         {items.map((item, i) => (
-          <Avatar key={i} src={item.url} variant="square" className="image-slide" />
+          <WrapperBanner key={i} background={item.url} />
         ))}
       </Carousel>
 

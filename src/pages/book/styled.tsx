@@ -198,7 +198,7 @@ export const BookPageStyle = styled(Grid)`
     text-align: center;
     font-size: 28px;
     font-weight: 600;
-    color: red;
+    color: #1976d2;
   }
 
   ${BookResponsive}

@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 
 import ResponsiveUI, { SIZE, SIZEH } from '@/src/constants/responsive';
 
-const HomeResponsive = css`
+const WrapperBannerResponsive = css`
   ${ResponsiveUI.lessThanH(SIZEH.PAD3)} {
     content: 'PAD3';
     ${ResponsiveUI.lessThan(SIZE.XXL2)} {
@@ -73,11 +73,7 @@ const HomeResponsive = css`
       content: 'PAD1 - XXL';
     }
     ${ResponsiveUI.lessThan(SIZE.XL2)} {
-      .image-slide {
-        .MuiAvatar-img {
-          height: 500px;
-        }
-      }
+      height: 500px;
     }
     ${ResponsiveUI.lessThan(SIZE.XL1)} {
       content: 'PAD1 - XL1';
@@ -89,17 +85,12 @@ const HomeResponsive = css`
       content: 'PAD1 - LG';
     }
     ${ResponsiveUI.lessThan(SIZE.MD)} {
-      content: 'PAD1 - MD';
+      height: 200px !important;
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
       content: 'PAD1 - SM';
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
-      .image-slide {
-        .MuiAvatar-img {
-          height: 200px !important;
-        }
-      }
     }
   }
   ${ResponsiveUI.lessThanH(SIZEH.MAC16)} {
@@ -194,17 +185,12 @@ const HomeResponsive = css`
   }
 `;
 
-export const HomePageStyle = styled(Grid)`
-  .MuiAvatar-root {
-    width: 100%;
-    height: 100%;
-  }
+export const HomePageStyle = styled(Grid)``;
 
-  .image-slide {
-    .MuiAvatar-img {
-      height: 700px;
-    }
-  }
+export const WrapperBanner = styled.div<{ background: string }>`
+  height: 700px;
+  background-image: url(${props => props.background});
+  background-size: 100% 100%;
 
-  ${HomeResponsive}
+  ${WrapperBannerResponsive}
 `;

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 export const ButtonBookingStyle = styled(Button)`
   &.btn-booking {
     background-color: #ffffff;
-    color: #ff0000;
+    color: #1976d2;
     font-weight: 600;
     padding: 6px 10px;
 
@@ -32,5 +32,16 @@ export const ButtonBookingStyle = styled(Button)`
     top: 64px;
     right: 24px;
     z-index: 2;
+    animation: dance 1.5s infinite;
+    border: 1px solid red;
+
+    @keyframes dance {
+      30% {
+        transform: rotate(-2deg) scale(1) skew(1deg);
+      }
+      40% {
+        transform: rotate(2deg) scale(1) skew(1deg);
+      }
+    }
   }
 `;
