@@ -43,10 +43,14 @@ const OffersResponsive = css`
       }
     }
     ${ResponsiveUI.lessThan(SIZE.XXL)} {
-      content: 'PAD2 - XXL';
+      .grid-item-offers {
+        padding: 0 150px;
+      }
     }
     ${ResponsiveUI.lessThan(SIZE.XL2)} {
-      content: 'PAD2 - XL2';
+      .grid-item-offers {
+        padding: 0 100px;
+      }
     }
     ${ResponsiveUI.lessThan(SIZE.XL1)} {
       content: 'PAD2 - XL1';
