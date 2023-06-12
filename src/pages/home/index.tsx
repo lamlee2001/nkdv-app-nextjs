@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
 
   return (
     <HomePageStyle>
-      <Carousel swipe={true} indicators={false} className="carousel">
+      <Carousel swipe={false} indicators={false} className="carousel">
         {items.map((item, i) => (
           <WrapperBanner key={i} background={item.url} />
         ))}
