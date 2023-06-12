@@ -43,7 +43,7 @@ const WrapperBannerResponsive = css`
       content: 'PAD2 - XXL';
     }
     ${ResponsiveUI.lessThan(SIZE.XL2)} {
-      content: 'PAD2 - XL2';
+      height: 550px;
     }
     ${ResponsiveUI.lessThan(SIZE.XL1)} {
       content: 'PAD2 - XL1';
