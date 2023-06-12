@@ -16,7 +16,7 @@ const FooterLayout: React.FC = () => {
   const itemInfo = [
     { icon: <LocationOnIcon />, text: '350 Nguyễn Hoàng, Thanh khê, Quận thanh khê, Đà nẵng' },
     { icon: <EmailIcon />, text: 'nhakhoadaiviet@gmail.com' },
-    { icon: <LanguageIcon />, text: 'https://nkdv-app-nextjs.vercel.app/' },
+    { icon: <LanguageIcon />, text: 'https://nhakhoadaiviet.vercel.app/' },
   ];
 
   const renderInfo = (): React.ReactNode =>

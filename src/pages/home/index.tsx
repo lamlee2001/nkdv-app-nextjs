@@ -3,6 +3,7 @@ import Carousel from 'react-material-ui-carousel';
 
 import OffersCard from './offers';
 import ServiceCard from './services';
+import FeedbackCard from './feedback';
 
 import BANNER_1 from 'src/assets/image/banner_1.jpg';
 import BANNER_2 from 'src/assets/image/banner_2.jpg';
@@ -46,6 +47,8 @@ const HomePage: React.FC = () => {
       <OffersCard />
 
       <ServiceCard />
+
+      <FeedbackCard />
     </HomePageStyle>
   );
 };
