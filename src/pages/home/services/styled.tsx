@@ -223,6 +223,7 @@ export const ServicesStyle = styled(Grid)`
       margin-bottom: 30px;
       max-width: calc(100% / 2 - 16px);
       box-shadow: 0 0 3px 1px rgb(0 0 0 / 25%);
+      position: relative;
 
       .image-item {
         height: 100%;
@@ -239,6 +240,14 @@ export const ServicesStyle = styled(Grid)`
           border: 5px solid #fff;
           opacity: 50%;
         }
+      }
+
+      .icon-tooth {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 75px;
+        height: 57px;
       }
 
       &:hover {
@@ -282,6 +291,7 @@ export const WrapperContent = styled.div`
     width: 148px;
     height: 42px;
     color: #000;
+    z-index: 1;
 
     &:hover {
       &::before {

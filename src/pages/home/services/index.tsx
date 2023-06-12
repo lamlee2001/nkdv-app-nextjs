@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import DividerTooth from '@/src/components/dividerTooth';
 
+import TOOTH_SERVICE from 'src/assets/image/tooth-service-image.png';
 import SERVICE_1 from 'src/assets/image/service_home_1.jpg';
 import SERVICE_2 from 'src/assets/image/service_home_2.png';
 import SERVICE_3 from 'src/assets/image/service_home_3.jpg';
@@ -67,6 +68,7 @@ const ServiceCard: React.FC = () => {
           <Typography className="text fzm-12">{item.text}</Typography>
           <Button className="see-more">{t('homePage.see_more')}</Button>
         </WrapperContent>
+        <Avatar src={TOOTH_SERVICE.src} variant="square" className="icon-tooth" />
       </Grid>
     ));
 
