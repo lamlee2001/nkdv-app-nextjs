@@ -25,7 +25,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 2000);
+  }, 1000);
 
   return (
     <>
