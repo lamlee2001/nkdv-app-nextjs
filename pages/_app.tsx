@@ -4,7 +4,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
-import { CircularProgress, Grid } from '@mui/material';
+import { Backdrop, CircularProgress } from '@mui/material';
 
 import { FooterLayout, HeaderLayout } from '@/src/layouts';
 import ContentLayout from '@/src/layouts/content';
@@ -41,9 +41,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
             <GlobalStyle />
 
             {isLoading ? (
-              <Grid container className="is-loading">
-                <CircularProgress />
-              </Grid>
+              <Backdrop sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }} open={isLoading}>
+                <CircularProgress color="inherit" />
+              </Backdrop>
             ) : (
               <>
                 <HeaderLayout />

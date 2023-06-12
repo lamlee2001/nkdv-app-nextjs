@@ -17,14 +17,6 @@ const GlobalStyle = createGlobalStyle`
       #__next {
         min-height: 100vh;
         min-width: 100vw;
-        
-        .is-loading{
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
       }
   }
 
