@@ -24,7 +24,7 @@ import PRICE_11 from 'src/assets/image/price_11.png';
 import PRICE_12 from 'src/assets/image/price_12.jpg';
 import PRICE_13 from 'src/assets/image/price_13.jpg';
 import PRICE_14 from 'src/assets/image/price_14.jpg';
-import PRICE_15 from 'src/assets/image/price_15.jpg';
+import PRICE_16 from 'src/assets/image/price_16.jpg';
 import { PricingPageStyle } from './style';
 
 const PricingPage: React.FC = () => {
@@ -43,7 +43,7 @@ const PricingPage: React.FC = () => {
     { image: PRICE_12, type: 'Răng sứ Cercon', price: '4.900.000 Đ' },
     { image: PRICE_13, type: 'Răng sứ Emax', price: '6.500.000 Đ' },
     { image: PRICE_14, type: 'Răng sứ Venner', price: '8.000.000 Đ' },
-    { image: PRICE_15, type: 'Cấy ghép Implant', price: '15.000.000 Đ - 30.000.000 Đ' },
+    { image: PRICE_16, type: 'Cấy ghép Implant', price: '15.000.000 Đ - 30.000.000 Đ' },
   ];
 
   return (
