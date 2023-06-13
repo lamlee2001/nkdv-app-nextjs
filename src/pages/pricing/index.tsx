@@ -79,9 +79,9 @@ const PricingPage: React.FC = () => {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell align="left">Image</TableCell>
-                  <TableCell align="left">Type</TableCell>
-                  <TableCell align="left">Price</TableCell>
+                  <TableCell align="left"></TableCell>
+                  <TableCell align="left">Loại dịch vụ</TableCell>
+                  <TableCell align="left">Giá</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
