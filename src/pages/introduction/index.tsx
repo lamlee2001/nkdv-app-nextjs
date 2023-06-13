@@ -11,9 +11,36 @@ import ABOUT_5 from 'src/assets/image/about_5.jpg';
 import ABOUT_6 from 'src/assets/image/about_6.jpg';
 import ABOUT_7 from 'src/assets/image/about_7.jpg';
 import ABOUT_8 from 'src/assets/image/about_8.jpg';
+import OFFER_1 from 'src/assets/image/offer_1.png';
+import OFFER_2 from 'src/assets/image/offer_2.png';
+import OFFER_3 from 'src/assets/image/offer_3.jpeg';
+import OFFER_4 from 'src/assets/image/offer_4.jpg';
+import SERVICE_HOME_5 from 'src/assets/image/service_home_5.jpg';
+import SERVICE_HOME_2 from 'src/assets/image/service_home_2.png';
 import { IntroductionPageStyle } from './style';
 
 const IntroductionPage: React.FC = () => {
+  const itemRight = [
+    { image: OFFER_1, text: 'Bọc răng sứ chỉ 999k/ Răng' },
+    { image: OFFER_2, text: 'Cấy ghép implant chỉ 6,9 Triệu' },
+    { image: OFFER_3, text: 'Niềng răng chỉ từ 15 Triệu' },
+    { image: OFFER_4, text: 'Nha khoa tổng quát' },
+    { image: SERVICE_HOME_5, text: 'Trồng Răng Implant Uy Tín Tại Đà Nẵng - Ưu Đãi 30% - Tặng Răng Sứ Cao Cấp' },
+    { image: SERVICE_HOME_2, text: 'Tẩy Trắng Răng tại Đà Nẵng' },
+  ];
+
+  const renderItem = (): React.ReactNode =>
+    itemRight.map((item, index) => (
+      <Grid key={index} container className="container-right">
+        <Grid item xs={12} className="item">
+          <Avatar src={item.image.src} variant="square" className="image" />
+          <Typography className="text" align="center">
+            {item.text}
+          </Typography>
+        </Grid>
+      </Grid>
+    ));
+
   return (
     <IntroductionPageStyle container>
       <Grid item xs={12} className="banner-about">
@@ -75,8 +102,10 @@ const IntroductionPage: React.FC = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={0} md={3}>
-          hi
+        <Grid item xs={0} md={3} className="grid-right">
+          <Typography className="title-right">Dịch vụ nổi bật</Typography>
+
+          {renderItem()}
         </Grid>
       </Grid>
     </IntroductionPageStyle>

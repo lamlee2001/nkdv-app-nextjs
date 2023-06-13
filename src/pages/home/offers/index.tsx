@@ -35,7 +35,7 @@ const OffersCard: React.FC = () => {
     },
     {
       urlAvatar: OFFER_3.src,
-      title: t('homePage.item_offers.offer_2.title'),
+      title: t('homePage.item_offers.offer_3.title'),
       content: [
         t('homePage.item_offers.offer_3.text_1'),
         t('homePage.item_offers.offer_3.text_2'),
@@ -44,7 +44,7 @@ const OffersCard: React.FC = () => {
     },
     {
       urlAvatar: OFFER_4.src,
-      title: t('homePage.item_offers.offer_2.title'),
+      title: t('homePage.item_offers.offer_4.title'),
       content: [
         t('homePage.item_offers.offer_4.text_1'),
         t('homePage.item_offers.offer_4.text_2'),

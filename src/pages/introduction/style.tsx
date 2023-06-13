@@ -119,6 +119,10 @@ const introductionResponsive = css`
             padding: 5px;
           }
         }
+
+        .grid-right {
+          display: none;
+        }
       }
     }
     ${ResponsiveUI.lessThan(SIZE.XS)} {
@@ -292,6 +296,43 @@ export const IntroductionPageStyle = styled(Grid)`
       .text-end {
         font-weight: 600;
         margin-bottom: 10px;
+      }
+    }
+
+    .grid-right {
+      box-shadow: 0 0 3px 1px rgb(0 0 0 / 25%);
+      height: fit-content;
+
+      .title-right {
+        color: red;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ff0000;
+      }
+
+      .container-right {
+        padding: 15px;
+
+        .item {
+          border: 1px solid #1976d2;
+        }
+
+        .image {
+          height: 200px;
+          width: 100%;
+        }
+
+        .text {
+          bottom: 15px;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          background-color: #1976d2;
+          color: #ffffff;
+          padding: 5px;
+        }
       }
     }
   }
