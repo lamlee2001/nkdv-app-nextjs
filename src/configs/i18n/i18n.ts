@@ -11,7 +11,7 @@ i18n
     returnNull: false,
     fallbackLng: LANGUAGE.EN,
     debug: false,
-    lng: LANGUAGE.EN,
+    lng: LANGUAGE.VI,
     resources: {
       en: {
         translation: en,

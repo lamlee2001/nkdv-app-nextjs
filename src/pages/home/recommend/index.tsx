@@ -47,7 +47,7 @@ const RecommendCard: React.FC = () => {
 
   const renderCard = (): React.ReactNode =>
     itemCard.map((item, index) => (
-      <Grid key={index} md={4} xs={12} className={`item-card ${index % 2 === 0 ? 'bg-blue' : ''}`}>
+      <Grid item key={index} md={4} xs={12} className={`item-card ${index % 2 === 0 ? 'bg-blue' : ''}`}>
         <Grid container>
           <Grid item xs={12} className="center">
             <Avatar key={index} variant="square" className="image-card" alt={item.alt} src={item.icon.src} />

@@ -6,7 +6,7 @@ import { LANGUAGE } from '@/src/constants/config';
 const { actions, reducer } = createSlice({
   name: 'i18n_slice',
   initialState: {
-    language: LANGUAGE.EN,
+    language: LANGUAGE.VI,
     isLoading: false,
   },
   reducers: {},

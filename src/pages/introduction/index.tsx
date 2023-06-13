@@ -20,7 +20,7 @@ const IntroductionPage: React.FC = () => {
         <Typography className="title fzm-16">Nha Khoa Đại Việt</Typography>
       </Grid>
       <Grid container className="content">
-        <Grid item xs={12} md={8} className="grid-left">
+        <Grid item xs={12} md={9} className="grid-left">
           <Breadcum>About</Breadcum>
 
           <Typography className="title-content">Về chúng tôi</Typography>
@@ -75,7 +75,7 @@ const IntroductionPage: React.FC = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={0} md={4}>
+        <Grid item xs={0} md={3}>
           hi
         </Grid>
       </Grid>

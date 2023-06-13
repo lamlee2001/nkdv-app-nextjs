@@ -44,20 +44,24 @@ const introductionResponsive = css`
     }
     ${ResponsiveUI.lessThan(SIZE.XL2)} {
       .content {
-        padding: 20px 200px;
+        padding: 20px 150px;
       }
     }
     ${ResponsiveUI.lessThan(SIZE.XL1)} {
       content: 'PAD2 - XL1';
     }
     ${ResponsiveUI.lessThan(SIZE.XL)} {
-      content: 'PAD2 - XL';
+      .content {
+        padding: 20px 100px;
+      }
     }
     ${ResponsiveUI.lessThan(SIZE.LG)} {
       content: 'PAD2 - LG';
     }
     ${ResponsiveUI.lessThan(SIZE.MD)} {
-      content: 'PAD2 - MD';
+      .content {
+        padding: 20px;
+      }
     }
     ${ResponsiveUI.lessThan(SIZE.SM)} {
       content: 'PAD2 - SM';
