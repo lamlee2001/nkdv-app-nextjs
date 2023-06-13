@@ -10,7 +10,7 @@ function useLoading(): ILoading {
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 1000);
+  }, 500);
 
   return { isLoading, setIsLoading };
 }
