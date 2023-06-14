@@ -50,7 +50,7 @@ const IntroductionPage: React.FC = () => {
         <Grid item xs={12} md={9} className="grid-left">
           <Breadcum>About</Breadcum>
 
-          <Typography className="title-content">Về chúng tôi</Typography>
+          <Typography className="title-content fzm-16">Về chúng tôi</Typography>
 
           <Divider className="divider" />
 

@@ -56,7 +56,7 @@ const PricingPage: React.FC = () => {
         <Grid item xs={12} md={9} className="grid-left">
           <Breadcum>Bảng giá</Breadcum>
 
-          <Typography className="title-content">Bảng giá các dịch vụ tại nha khoa thẩm mỹ Đại Việt</Typography>
+          <Typography className="title-content fzm-16">Bảng giá các dịch vụ tại nha khoa thẩm mỹ Đại Việt</Typography>
 
           <Divider className="divider" />
 
